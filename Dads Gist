@@ -1,0 +1,61 @@
+Enter file contents here#Finished_WithDadEWdits
+# only minor edits
+
+while True: 
+    wallpaper=(input("Would you like wall paper?"))
+    if wallpaper != 'yes' and wallpaper != 'no':
+        # 'YES' or 'NO' or 'y' or 'Y' or 'N' or 'n'):
+        # originall had if wallpaper != ('yes', 'no'):
+        # when I add "continue" nothing happens
+        print("Do you want wallpaper 'yes' or 'no' - KEEP THE ANSWER lower case for now")
+        continue
+    else:
+        #we're happy with the value given
+        #we're ready to exit the loop
+        break
+        # indents really messed with me!!! 
+        # this whole section seemed to be about  if, continue, else and break - argh!!!
+        #Also learnt about restarting the kernel to save relaoding Jupyter notebook
+        # NOW WE HAVE HEADACHE OF INTEGERS OR DECIMALS OT TEXT FOR WIDTH ETC 
+if wallpaper=="yes":
+ def inputNumber(message):
+  while True:
+   try:
+      userInput  = float(input(message))
+   except ValueError:
+      print("This is not an number. Try again.")
+      continue
+   else:
+      return userInput
+      break
+
+ width = inputNumber("What width would you like?")
+ length= inputNumber("What would you like the length to be?")
+ height= inputNumber("What height would you like?")
+ #Dad wants to change from inputNumber to int (for integer, but can;t make things work)
+ doors= inputNumber("How many doors would you like?")
+ totalcostofwallpaper=8*(2*(length*height)+2*(width*height)-(2*doors))
+ costofpaint=(15*doors)+5*(length*width) 
+ print("total cost of wallpaper=£"+str(totalcostofwallpaper))
+ #corrected spelling 
+ print("total cost of paint for the ceiling=£"+str(costofpaint))
+ print("total cost=£"+str(costofpaint+totalcostofwallpaper))
+
+if wallpaper=="no":
+ def inputNumber(message):
+  while True:
+   try:
+      userInput  = float(input(message))
+   except ValueError:
+      print("This is not an number. Try again.")
+      continue
+   else:
+      return userInput
+      break
+        
+ width= inputNumber("What width would you like?")
+ length= inputNumber("What would you like the length to be?")
+ height= inputNumber("What height would you like?")
+ doors= inputNumber("How many doors would you like?")
+ totalcostofpaint=(15*doors)+5*((width*length+2*width*height+2*length*height)-(2*doors))
+ print("total cost of paint=£"+str(totalcostofpaint))
